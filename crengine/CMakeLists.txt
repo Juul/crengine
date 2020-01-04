@@ -20,7 +20,10 @@ src/xxhash.c
 
 if ( NOT ${GUI} STREQUAL FB2PROPS )
     SET (CRENGINE_SOURCES ${CRENGINE_SOURCES}
-    src/lvbmpbuf.cpp   
+    src/fb3fmt.cpp
+    src/docxfmt.cpp
+    src/lvopc.cpp    
+    src/lvbmpbuf.cpp
     src/lvfnt.cpp      
     src/hyphman.cpp    
     src/lvfntman.cpp        
@@ -44,4 +47,12 @@ if ( NOT ${GUI} STREQUAL FB2PROPS )
 endif (NOT ${GUI} STREQUAL FB2PROPS)
 
 ADD_LIBRARY(crengine STATIC ${CRENGINE_SOURCES})
+
+SET (QIMAGESCALE_SOURCES 
+  qimagescale/qimagescale.cpp
+  qimagescale/qimagescale_neon.cpp
+  qimagescale/qimagescale_sse4.cpp
+)
+
+ADD_LIBRARY(qimagescale STATIC ${QIMAGESCALE_SOURCES})
 

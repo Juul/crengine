@@ -28,7 +28,7 @@
 #endif
 
 #if USE_HARFBUZZ==1
-#include <hb.h>
+#include <harfbuzz/hb.h>
 #endif
 
 #if (USE_FRIBIDI==1)

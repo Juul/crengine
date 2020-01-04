@@ -342,7 +342,7 @@ void CRLinksDialog::invalidateCurrentSelection()
         return;
     }
     lvRect rc;
-    if ( link->getRect( rc ) ) {
+    if ( link->getRectEx( rc ) ) {
         CRLog::debug("link docRect { %d, %d, %d, %d }", rc.left, rc.top, rc.right, rc.bottom);
 #if 1
         _invalidateRect.left = 0;
